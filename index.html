@@ -1,46 +1,59 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Img Slider</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Img Slider</title>
 
+    <!-- tailwind and dasiUI cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-<!-- tailwind and dasiUI cdn -->
-<link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- img slide area -->
 
+    <section class="py-10 lg:py-20">
+      <!-- img main container -->
 
-<!-- font awesome cdn -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-</head>
-<body>
-  
-
-
-<!-- img slide area -->
-
-
-<section class=" border border-red-50">
-
-
-<!-- img main container -->
-
-<div class="main-img-container max-w-full  border relative" id="img-container">
-
-  <div class="absolute  top-[50%]  px-2 text-white flex justify-between w-full"><button class="left-btn btn  btn-circle items-start  border-0 bg-[rgba(255,255,255,0.2)]  backdrop-blur-sm"><span class="pointer-events-none text-3xl"><</span></button>
-<button class="right-btn btn  btn-circle items-start  border-0 bg-[rgba(255,255,255,0.2)]  backdrop-blur-sm"><span class="text-3xl pointer-events-none">></span></button>
-  </div>
-  <img src="./assets/photo-1.jpg" alt="" class="min-h-screen w-full" id="img-node">
-  
-  </div>
-
-
-
-
-</section>
-<script src="./scripts/slider.js"></script>
-
-</body>
+      <div
+        class="main-img-container max-w-6xl max-h-[600px] mx-auto w-[90%] relative"
+        id="img-container"
+      >
+        <div
+          class="absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] px-2 text-white flex justify-between w-full"
+        >
+          <button
+            class="left-btn btn btn-circle items-start border-0 bg-[rgba(255,255,255,0.2)] backdrop-blur-sm"
+          >
+            <span class="pointer-events-none text-3xl"><</span>
+          </button>
+          <button
+            class="right-btn btn btn-circle items-start border-0 bg-[rgba(255,255,255,0.2)] backdrop-blur-sm"
+          >
+            <span class="text-3xl pointer-events-none">></span>
+          </button>
+        </div>
+        <img
+          src="./assets/photo-1.jpg"
+          alt=""
+          class="max-h-[600px] w-full rounded-lg"
+          id="img-node"
+        />
+      </div>
+    </section>
+    <script src="./scripts/slider.js"></script>
+  </body>
 </html>
